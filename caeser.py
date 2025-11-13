@@ -10,4 +10,3 @@ def caesar(text):
       new_text += text[ch]
   return new_text
 
-print(caesar("meir"))
