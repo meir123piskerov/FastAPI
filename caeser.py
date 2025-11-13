@@ -1,13 +1,13 @@
-def caese(text,num):
-    zugi = ''
-    hi_zugi = ''
+def caesar(text):
+  new_text = ""
+  for ch in range(len(text)):
+    if ch == 0:
+      new_text += text[ch]
+    elif ch % 2 == 0 and ch != 0:
+      new_text += text[ch]
+  for ch in range(len(text)):
+    if ch % 2 != 0:
+      new_text += text[ch]
+  return new_text
 
-    for i ,j in enumerate(text):
-        if j % num == 0:
-            zugi += i
-        else:
-            hi_zugi += i
-
-
-    new_text = zugi + hi_zugi
-    return new_text
+print(caesar("meir"))
